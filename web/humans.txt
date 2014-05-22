@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Giacomo Gatelli - @arthens
 
 # THANKS
 
-    <name>
+    All open source developers
 
 # TECHNOLOGY COLOPHON
 

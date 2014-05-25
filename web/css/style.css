@@ -1,16 +1,45 @@
-body *{
-  font-family: 'Fjord One', serif;
+html, body {
+  height: 100%;
 }
 
-.main-menu {
+* {
+  font-family: 'Fjord One', serif;
+  box-sizing: border-box;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100%;
+  max-width: 1200px;
+}
+
+.section {
+  padding: 25px;
+}
+
+.section--navigation {
   background-color: #191919;
   color: #c8c8c8;
 }
 
-.main-menu a {
+.section--navigation a {
   color: #c8c8c8;
 }
 
-.main-content {
+@media only screen and (min-width : 768px) {
+  .section--navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+  }
 
+  .section--content {
+    margin-left: 40%;
+  }
+}
+
+.me-name, .me-intro {
+  text-align: center;
 }

@@ -1,3 +1,6 @@
+/**
+  * Page layout
+  */
 html, body {
   height: 100%;
 }
@@ -13,21 +16,34 @@ html, body {
   max-width: 1200px;
 }
 
-.section {
-  padding: 25px;
+.page-section {
+  padding: 30px;
 }
 
-.section--navigation {
+.section + .section {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width : 768px) {
+  .section + .section {
+    margin-top: 60px;
+  }
+}
+
+/**
+  * Navigation
+  */
+.page-section--navigation {
   background-color: #191919;
   color: #c8c8c8;
 }
 
-.section--navigation a {
+.page-section--navigation a {
   color: #c8c8c8;
 }
 
 @media only screen and (min-width : 768px) {
-  .section--navigation {
+  .page-section--navigation {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -35,11 +51,71 @@ html, body {
     width: 40%;
   }
 
-  .section--content {
+  .page-section--content {
     margin-left: 40%;
   }
 }
 
-.me-name, .me-intro {
+/**
+  * Navigation - me
+  */
+.section--me {
   text-align: center;
+}
+
+.me-avatar {
+  width: 120px;
+  border-radius: 50%;
+}
+
+/**
+  * Navigation - menu
+  */
+.section--menu {
+  text-align: center;
+}
+
+.menu-links {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link {
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+}
+
+.menu-link a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media only screen and (min-width : 768px) {
+  .menu-link {
+    display: block;
+    margin: 0 0 20px 0;
+  }
+}
+
+/**
+  * Navigation - social links
+  */
+.section--social {
+  text-align: center;
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+  display: inline-block;
+  list-style: none;
+  font-size: 32px;
+}
+
+.social-link + .social-link {
+  margin-left: 25px;
 }

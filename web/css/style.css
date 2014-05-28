@@ -119,3 +119,12 @@ html, body {
 .social-link + .social-link {
   margin-left: 25px;
 }
+
+/**
+  * Content
+  */
+
+.page-section--content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}

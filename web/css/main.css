@@ -23,16 +23,8 @@ body {
     line-height: 1.4;
 }
 
-a {
-    color: #00e;
-}
-
-a:visited {
-    color: #551a8b;
-}
-
-a:hover {
-    color: #06e;
+a, a:visited, a:hover {
+    color: #222;
 }
 
 /*
@@ -213,4 +205,155 @@ textarea[contenteditable] {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+/**
+  * Page layout
+  */
+html, body {
+  height: 100%;
+}
+
+@font-face {
+    font-family: 'aller';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../fonts/aller_lt-webfont.ttf') format('truetype'),
+         url('../fonts/aller_lt-webfont.svg#aller_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+  font-family: 'aller', serif;
+  box-sizing: border-box;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100%;
+  max-width: 1200px;
+}
+
+.page-section {
+  padding: 30px;
+}
+
+.section + .section {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width : 768px) {
+  .section + .section {
+    margin-top: 60px;
+  }
+}
+
+/**
+  * Navigation
+  */
+.page-section--navigation {
+  background-color: #191919;
+  color: #c8c8c8;
+  border-bottom: 5px solid #fdb020;
+}
+
+.page-section--navigation a {
+  color: #c8c8c8;
+  text-decoration: none;
+}
+
+.page-section--navigation a:hover {
+  color: #fdb020;
+}
+
+@media only screen and (min-width : 768px) {
+  .page-section--navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+
+    border-bottom: 0;
+    border-right: 5px solid #fdb020;
+  }
+
+  .page-section--content {
+    margin-left: 40%;
+  }
+}
+
+/**
+  * Navigation - me
+  */
+.section--me {
+  text-align: center;
+}
+
+.me-avatar {
+  width: 120px;
+  border-radius: 50%;
+}
+
+/**
+  * Navigation - menu
+  */
+.section--menu {
+  text-align: center;
+}
+
+.menu-links {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link {
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+}
+
+.menu-link a {
+  font-weight: bold;
+}
+
+@media only screen and (min-width : 768px) {
+  .menu-link {
+    display: block;
+    margin: 0 0 20px 0;
+  }
+}
+
+/**
+  * Navigation - social links
+  */
+.section--social {
+  text-align: center;
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+  display: inline-block;
+  list-style: none;
+  font-size: 32px;
+}
+
+.social-link + .social-link {
+  margin-left: 25px;
+}
+
+/**
+  * Content
+  */
+
+.page-section--content p {
+  font-size: 1.2em;
+  line-height: 1.5;
 }

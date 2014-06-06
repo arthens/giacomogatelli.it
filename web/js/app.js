@@ -25,18 +25,32 @@ var LoadingComponent = React.createClass({
   }
 });
 
-var AboutComponent = React.createClass({
-  componentWillMount: function() {
+var cache = {};
+var RequestCache = {
+  load: function(url, callback) {
+    if (cache[url]) {
+      callback(cache[url]);
+    } else {
       $.ajax({
-          url: this.props.url,
-          dataType: 'text',
+          url: url,
           success: function(data) {
-              this.setState({data: data});
+            cache[url] = data;
+            callback(cache[url]);
           }.bind(this),
           error: function(xhr, status, err) {
               console.error(this.props.url, status, err.toString());
           }.bind(this)
       });
+    }
+  }
+};
+
+var AboutComponent = React.createClass({
+  componentWillMount: function() {
+    var that = this;
+    RequestCache.load(this.props.url, function(data){
+      that.setState({data: data})
+    });
   },
   render: function() {
     if (this.state && this.state.data) {
@@ -44,12 +58,17 @@ var AboutComponent = React.createClass({
     } else {
       return <LoadingComponent />
     }
-
   }
 });
 
 var CurriculumComponent = React.createClass({
   render: function() {
     return <h1>Curriculum</h1>;
+  }
+});
+
+var ContactComponent = React.createClass({
+  render: function() {
+    return <h1>Contact me</h1>;
   }
 });

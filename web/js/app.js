@@ -84,13 +84,13 @@ var JsxIf = function (props, children, wat, da, fuq) {
 var TimelineComponent = React.createClass({
   render: function() {
     var events = this.props.events;
-    return <div className="event-list">{events.map(function (event) {
-      return <div className="event">
-        <div className="event-period">{event.from} - {event.to}</div>
-        <div className="event-details">
+    return <div className="timeline">{events.map(function (event) {
+      return <div className="timeline__event">
+        <div className="timeline__event-period">{event.from} - {event.to}</div>
+        <div className="timeline__event-details">
           <b>{event.title}</b>
-          <JsxIf condition={event.company}>
-            <br /> at {event.company}
+          <JsxIf condition={event.place}>
+            <br /> at {event.place}
           </JsxIf>
         </div>
       </div>;
@@ -110,6 +110,7 @@ var SkillsComponent = React.createClass({
 var CurriculumComponent = React.createClass({
   getInitialState: function() {
     return {
+      intro: "",
       work: [],
       education: [],
       skills: []
@@ -125,6 +126,8 @@ var CurriculumComponent = React.createClass({
     return (
       <div>
         <h1>Curriculm</h1>
+
+        <p>{this.state.intro}</p>
 
         <div>
           <h2>Work experience</h2>

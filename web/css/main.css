@@ -353,7 +353,41 @@ html, body {
   * Content
   */
 
-.page-section--content p {
+.page-section--content {
   font-size: 1.2em;
   line-height: 1.5;
+}
+
+/**
+ * CV
+ */
+
+.timeline {
+  margin-bottom: 50px;
+}
+
+.timeline__event {
+  margin-bottom: 25px;
+}
+
+.timeline__event-period {
+  font-size: 0.9em;
+}
+
+.timeline__event-details {
+  border-top: 1px solid #666;
+  padding: 10px 0 0 0;
+}
+
+@media only screen and (min-width : 480px) {
+  .timeline__event-period {
+    float: left;
+  }
+
+  .timeline__event-details {
+    margin-left: 33%;
+    border-top: 0;
+    border-left: 1px solid #666;
+    padding: 0 0 0 10px;
+  }
 }

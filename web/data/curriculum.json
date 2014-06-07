@@ -1,21 +1,23 @@
 {
+  "intro": "This is just a generic overview or my career. Please get in touch if you'd like to know more.",
   "work": [
     {
       "from": "2014",
+      "to": "NOW",
       "title": "Senior Software Engineer",
-      "company": "99designs"
+      "place": "99designs"
     },
     {
       "from": "2012",
       "to": "2014",
       "title": "Software Engineer",
-      "company": "99designs"
+      "place": "99designs"
     },
     {
       "from": "2009",
       "to": "2012",
       "title": "Software Engineer",
-      "company": "Amazon.com"
+      "place": "Amazon.com"
     },
     {
       "from": "2005",
@@ -29,19 +31,19 @@
       "from": "2008",
       "to": "2009",
       "title": "Master in Computer Science",
-      "institute": "Univeristy of Edinburgh"
+      "place": "The Univeristy of Edinburgh"
     },
     {
       "from": "2007",
       "to": "2008",
       "title": "Laurea Specialistica in Net Centric",
-      "institute": "Università di Trento"
+      "place": "Università di Trento"
     },
     {
       "from": "2003",
       "to": "2007",
       "title": "Laurea Triennale in Computer Science",
-      "institute": "Università Cattolica del Sacro Cuore di Brescia"
+      "place": "Università Cattolica del Sacro Cuore di Brescia"
     }
   ],
 

@@ -1,0 +1,53 @@
+{
+  "work": [
+    {
+      "period": "2014 - ...",
+      "title": "Senior Software Engineer",
+      "company": "99designs"
+    },
+    {
+      "period": "2012 - 2014",
+      "title": "Software Engineer",
+      "company": "99designs"
+    },
+    {
+      "period": "2009 - 2012",
+      "title": "Software Engineer",
+      "company": "Amazon.com"
+    },
+    {
+      "period": "2005 - 2009",
+      "title": "Freelancer"
+    }
+  ],
+
+  "education": [
+    {
+      "period": "2008 - 2009",
+      "title": "Master in Computer Science",
+      "institute": "Univeristy of Edinburgh"
+    },
+    {
+      "period": "2007 - 2008",
+      "title": "Laurea Specialistica in Net Centric",
+      "institute": "Università di Trento"
+    },
+    {
+      "period": "2003 - 2007",
+      "title": "Laurea Triennale in Computer Science",
+      "institute": "Università Cattolica del Sacro Cuore di Brescia"
+    }
+  ],
+
+  "skills": [
+    "Java",
+    "PHP",
+    "Ruby",
+    "Scala",
+    "Clojure",
+    "clojurescript",
+    "Javascript",
+    "SQL",
+    "HTML + CSS"
+  ]
+}

@@ -12,7 +12,7 @@ var RoutingComponent = React.createClass({
     var componentName = this.props.router.current;
     switch (this.props.router.current) {
         case 'about':
-            return <AboutComponent url="data/about.en.md" />;
+            return <AboutComponent />;
 
         case 'curriculum':
             return <CurriculumComponent />;

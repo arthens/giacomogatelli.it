@@ -38,19 +38,25 @@ var RequestCache = {
             callback(cache[url]);
           }.bind(this),
           error: function(xhr, status, err) {
-              console.error(this.props.url, status, err.toString());
+              console.error(url, status, err.toString());
           }.bind(this)
       });
     }
   }
 };
 
-var AboutComponent = React.createClass({
-  componentWillMount: function() {
+var RemotePageComponent = React.createClass({
+  getData: function () {
     var that = this;
     RequestCache.load(this.props.url, function(data){
-      that.setState({data: data})
+      that.setState({data: data});
     });
+  },
+  componentWillMount: function() {
+    this.getData();
+  },
+  componentWillReceiveProps: function() {
+    this.getData();
   },
   render: function() {
     if (this.state && this.state.data) {
@@ -61,14 +67,90 @@ var AboutComponent = React.createClass({
   }
 });
 
-var CurriculumComponent = React.createClass({
+var AboutComponent = React.createClass({
   render: function() {
-    return <h1>Curriculum</h1>;
+    return <RemotePageComponent url="data/about.en.md" />;
+  }
+});
+
+var JsxIf = function (props, children, wat, da, fuq) {
+  var arguments = Array.prototype.slice.call(arguments),
+    props = arguments.shift(),
+    children = arguments;
+
+  return props.condition ? children : null;
+}
+
+var TimelineComponent = React.createClass({
+  render: function() {
+    var events = this.props.events;
+    return <div className="event-list">{events.map(function (event) {
+      return <div className="event">
+        <div className="event-period">{event.from} - {event.to}</div>
+        <div className="event-details">
+          <b>{event.title}</b>
+          <JsxIf condition={event.company}>
+            <br /> at {event.company}
+          </JsxIf>
+        </div>
+      </div>;
+    })}</div>;
+  }
+});
+
+var SkillsComponent = React.createClass({
+  render: function() {
+    var skills = this.props.skills;
+    return <div className="skill-list">{skills.map(function (skill) {
+      return <div className="skill">{skill}</div>;
+    })}</div>;
+  }
+});
+
+var CurriculumComponent = React.createClass({
+  getInitialState: function() {
+    return {
+      work: [],
+      education: [],
+      skills: []
+    };
+  },
+  componentWillMount: function() {
+    var that = this;
+    RequestCache.load("data/curriculum.json", function(data){
+      that.setState(data);
+    });
+  },
+  render: function() {
+    return (
+      <div>
+        <h1>Curriculm</h1>
+
+        <div>
+          <h2>Work experience</h2>
+          <TimelineComponent events={this.state.work} />
+        </div>
+
+        <div>
+          <h2>Education</h2>
+          <TimelineComponent events={this.state.education} />
+        </div>
+
+        <div>
+          <h2>Skills</h2>
+          <SkillsComponent skills={this.state.skills} />
+        </div>
+      </div>
+    );
   }
 });
 
 var ContactComponent = React.createClass({
   render: function() {
-    return <h1>Contact me</h1>;
+    return (
+      <div>
+        <h1>Contact me</h1>
+      </div>
+    );
   }
 });

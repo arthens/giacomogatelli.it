@@ -101,8 +101,8 @@ var TimelineComponent = React.createClass({
 var SkillsComponent = React.createClass({
   render: function() {
     var skills = this.props.skills;
-    return <div className="skill-list">{skills.map(function (skill) {
-      return <div className="skill">{skill}</div>;
+    return <div className="skills">{skills.map(function (skill) {
+      return <div className="skills__skill">{skill}</div>;
     })}</div>;
   }
 });

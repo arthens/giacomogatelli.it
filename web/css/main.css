@@ -193,23 +193,9 @@ textarea[contenteditable] {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   My styles :-)
    ========================================================================== */
 
-@media only screen and (min-width: 800px) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-/**
-  * Page layout
-  */
 html, body {
   height: 100%;
 }
@@ -245,7 +231,7 @@ html, body {
   margin-top: 30px;
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 840px) {
   .section + .section {
     margin-top: 60px;
   }
@@ -269,7 +255,7 @@ html, body {
   color: #fdb020;
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 840px) {
   .page-section--navigation {
     position: absolute;
     top: 0;
@@ -320,7 +306,7 @@ html, body {
   font-weight: bold;
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 840px) {
   .menu-link {
     display: block;
     margin: 0 0 20px 0;
@@ -358,11 +344,10 @@ html, body {
   line-height: 1.5;
 }
 
-/**
- * CV
- */
-
-.timeline {
+/* ==========================================================================
+   Curriculum page
+   ========================================================================== */
+.timeline, .skills {
   margin-bottom: 50px;
 }
 
@@ -390,4 +375,14 @@ html, body {
     border-left: 1px solid #666;
     padding: 0 0 0 10px;
   }
+}
+
+.skills__skill {
+  background-color: #fdb020;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  margin: 5px;
+  padding: 0 5px;
+  text-shadow: 0 1px #666;
 }

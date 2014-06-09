@@ -200,6 +200,10 @@ html, body {
   height: 100%;
 }
 
+h1 {
+  margin-top: 0;
+}
+
 @font-face {
     font-family: 'aller';
     src: url('../fonts/aller_lt-webfont.eot');
@@ -220,7 +224,6 @@ html, body {
 .page-container {
   position: relative;
   min-height: 100%;
-  max-width: 1200px;
 }
 
 .page-section {
@@ -231,32 +234,42 @@ html, body {
   margin-top: 30px;
 }
 
+.page-section__content {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
 @media only screen and (min-width : 840px) {
   .section + .section {
     margin-top: 60px;
   }
 }
 
-/**
-  * Navigation
-  */
-.page-section--navigation {
+/* ==========================================================================
+   Navigation - primary and secondary
+   ========================================================================== */
+
+.page-section__navigation {
   background-color: #191919;
   color: #c8c8c8;
   border-bottom: 5px solid #fdb020;
 }
 
-.page-section--navigation a {
+.page-section__navigation a {
   color: #c8c8c8;
   text-decoration: none;
 }
 
-.page-section--navigation a:hover {
+.page-section__navigation a:hover {
   color: #fdb020;
 }
 
+.page-section__navigation--main .section__social {
+  display: none;
+}
+
 @media only screen and (min-width : 840px) {
-  .page-section--navigation {
+  .page-section__navigation {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -267,15 +280,30 @@ html, body {
     border-right: 5px solid #fdb020;
   }
 
-  .page-section--content {
+  .page-section__content {
     margin-left: 40%;
+  }
+
+  .page-section__navigation--main .section__social {
+    display: block;
+  }
+
+  .page-section__navigation--secondary {
+    display: none;
   }
 }
 
-/**
-  * Navigation - me
-  */
-.section--me {
+@media only screen and (min-width : 1200px) {
+  .page-section__content {
+    padding: 30px 4%;
+  }
+}
+
+/* ==========================================================================
+   Navigation elements
+   ========================================================================== */
+
+.section__me {
   text-align: center;
 }
 
@@ -284,10 +312,7 @@ html, body {
   border-radius: 50%;
 }
 
-/**
-  * Navigation - menu
-  */
-.section--menu {
+.section__menu {
   text-align: center;
 }
 
@@ -313,10 +338,7 @@ html, body {
   }
 }
 
-/**
-  * Navigation - social links
-  */
-.section--social {
+.section__social {
   text-align: center;
 }
 
@@ -335,18 +357,10 @@ html, body {
   margin-left: 25px;
 }
 
-/**
-  * Content
-  */
-
-.page-section--content {
-  font-size: 1.2em;
-  line-height: 1.5;
-}
-
 /* ==========================================================================
    Curriculum page
    ========================================================================== */
+
 .timeline, .skills {
   margin-bottom: 50px;
 }

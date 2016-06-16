@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rm -rf _site",
     "static": "cp -R static/ _site/",
-    "build": "webpack -d",
-    "build-watch": "watch 'npm run build' src/",
+    "build": "webpack -d --display-modules",
+    "build-watch": "npm run build -- --watch",
     "build-prod": "npm run static && webpack -p"
   },
   "dependencies": {
@@ -34,7 +34,6 @@
     "http-server": "^0.9.0",
     "mocha": "^2.5.3",
     "sinon": "^1.17.4",
-    "static-site-generator-webpack-plugin": "^2.1.0",
-    "watch": "^0.18.0"
+    "static-site-generator-webpack-plugin": "^2.1.0"
   }
 }

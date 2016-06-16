@@ -14,7 +14,7 @@ export default (rendered, vars) =>
   <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 </head>
 <body>
-  ${rendered}
+  <div id="root">${rendered}</div>
 
   <script src='/js/app.js'></script>
 </body>

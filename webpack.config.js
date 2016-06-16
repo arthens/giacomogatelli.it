@@ -16,7 +16,6 @@ module.exports = {
         //     { test: /jsx?$/, loader: 'eslint', exclude: /node_modules/ }
         // ],
         loaders: [
-            { test: /\.html$/, loader: 'raw-loader' },
             {
                 loader: 'babel-loader',
                 test: /jsx?$/,
@@ -29,22 +28,18 @@ module.exports = {
         ]
     },
     plugins: [
-        new StaticSiteGeneratorPlugin('js/app', [
+        new StaticSiteGeneratorPlugin('js/app.js', [
             '/index.html',
             '/curriculum.html',
             '/contact.html'
-        ], {
-            // Properties here are merged into `locals`
-            // passed to the exported render function
-            greet: 'Hello'
-        })
+        ])
     ],
     entry: {
-        "js/app": "./src/app.jsx"
+        "js/app.js": "./src/app.jsx"
     },
     output: {
         path: path.join(__dirname, "_site/"),
-        filename: '[name].js',
+        filename: '[name]',
         libraryTarget: 'umd'
     },
     eslint: {

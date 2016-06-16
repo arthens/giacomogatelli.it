@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf _site",
     "build": "webpack -d",
-    "watch-watch": "watch 'npm run build' .",
+    "build-watch": "watch 'npm run build' src/",
     "build-prod": "webpack -p"
   },
   "dependencies": {
@@ -17,9 +17,11 @@
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
-    "eslint-plugin-react": "^5.1.1",
+    "history": "^3.0.0",
+    "raw-loader": "^0.5.1",
     "react": "^15.1.0",
-    "react-router": "^2.4.1",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.0.0",
     "webpack": "^1.13.1"
   },
   "devDependencies": {
@@ -28,7 +30,10 @@
     "eslint": "^2.12.0",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-react": "^5.1.1",
+    "http-server": "^0.9.0",
     "mocha": "^2.5.3",
-    "sinon": "^1.17.4"
+    "sinon": "^1.17.4",
+    "static-site-generator-webpack-plugin": "^2.1.0",
+    "watch": "^0.18.0"
   }
 }

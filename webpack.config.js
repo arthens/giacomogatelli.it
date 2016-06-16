@@ -1,6 +1,5 @@
-'use strict';
-
-var path = require('path');
+const path =require('path')
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 
 module.exports = {
     resolve: {
@@ -9,12 +8,13 @@ module.exports = {
         modulesDirectories: [
             'src',
             'node_modules'
-        ]
+        ],
+        unsafeCache: true
     },
     module: {
-        preLoaders: [
-            { test: /jsx?$/, loader: 'eslint', exclude: /node_modules/ }
-        ],
+        // preLoaders: [
+        //     { test: /jsx?$/, loader: 'eslint', exclude: /node_modules/ }
+        // ],
         loaders: [
             { test: /\.html$/, loader: 'raw-loader' },
             {
@@ -28,13 +28,24 @@ module.exports = {
             }
         ]
     },
-    plugins: {},
+    plugins: [
+        new StaticSiteGeneratorPlugin('js/app', [
+            '/index.html',
+            '/curriculum.html',
+            '/contact.html'
+        ], {
+            // Properties here are merged into `locals`
+            // passed to the exported render function
+            greet: 'Hello'
+        })
+    ],
     entry: {
-        app: "src/app.jsx"
+        "js/app": "./src/app.jsx"
     },
     output: {
-        path: path.join(__dirname, "_site/js"),
-        filename: '[name].js'
+        path: path.join(__dirname, "_site/"),
+        filename: '[name].js',
+        libraryTarget: 'umd'
     },
     eslint: {
         failOnWarning: true,

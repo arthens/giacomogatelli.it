@@ -18,9 +18,11 @@ export default (locals, callback) => {
     const location = history.createLocation(locals.path)
 
     match({ routes, location}, (error, redirectLocation, renderProps) => {
-        callback(null, template(
-            ReactDOMServer.renderToString(<RouterContext {...renderProps} />),
-            locals.assets
-        ));
+        const rendered = ReactDOMServer.renderToString(<RouterContext {...renderProps} />)
+        callback(null, template(rendered, {
+            pageTitle: 'Giacomo Gatelli',
+            pageDescription: 'Giacomo Gatelli - Software engineer, technology enthusiast, gamer, avid reader',
+            lang: 'en'
+        }));
     })
 }

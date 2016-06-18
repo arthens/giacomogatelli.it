@@ -1,14 +1,13 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 export default React.createClass({
     render() {
         return (
             <div>
-                <h1>Contact me</h1>
-
-                <p>Send me an email at arthens [at] gmail [dot] com and I'll get back to you when I can.</p>
-
-                <p>Alternatively you can find me on most social websites as <b>arthens</b>.</p>
+                <h1><FormattedMessage id="contact_title"/></h1>
+                <p><FormattedMessage id="contact_email"/></p>
+                <p><FormattedMessage id="contact_other"/></p>
             </div>
         )
     }

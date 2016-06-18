@@ -36,6 +36,9 @@ module.exports = {
             '/',
             '/curriculum.html',
             '/contact.html',
+            '/it/',
+            '/it/curriculum.html',
+            '/it/contact.html',
             '/404.html'
         ])
     ],

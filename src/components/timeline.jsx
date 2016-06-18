@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 export default  React.createClass({
     propTypes: {
@@ -31,7 +32,7 @@ export default  React.createClass({
 
     renderPlace(event) {
         if (event.place) {
-            return <div>at {event.place}</div>
+            return <div>{event.place}</div>
         } else {
             return <span/>
         }

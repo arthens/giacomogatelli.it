@@ -1,5 +1,8 @@
 import React from 'react'
-import { IntlProvider } from 'react-intl'
+import { IntlProvider, addLocaleData } from 'react-intl'
+
+import itLocaleData from 'react-intl/locale-data/it';
+addLocaleData(itLocaleData);
 
 import it from '../data/it.translations'
 import en from '../data/en.translations'
@@ -7,14 +10,15 @@ import en from '../data/en.translations'
 export default (Component, locale) => {
     return React.createClass({
         render() {
-            let messages = locale == 'it' ? it : en;
+            let translations = locale == 'it' ? it : en;
             return (
-                <IntlProvider locale={locale} >
-                    <Component locale={locale} {...this.props}/>
+                <IntlProvider
+                    locale={translations.locale}
+                    messages={translations.messages}>
+                    <Component {...this.props}/>
                 </IntlProvider>
             )
         }
     });
 }
 
-//messages={messages.messages}

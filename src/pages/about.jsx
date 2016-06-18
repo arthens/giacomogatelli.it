@@ -1,10 +1,17 @@
 import React from 'react'
-import Markdown from 'react-remarkable';
+import Markdown from 'react-remarkable'
+import { injectIntl } from 'react-intl'
 
-import aboutme from '../data/about.en.md'
+import enAboutMe from '../data/en.about.md'
+import itAboutMe from '../data/it.about.md'
 
-export default React.createClass({
+export default injectIntl(React.createClass({
+    propTypes: {
+        intl: React.PropTypes.object.isRequired
+    },
+
     render() {
-        return <Markdown source={aboutme} />
+        let source = this.props.intl.locale === 'it' ? itAboutMe : enAboutMe
+        return <Markdown source={source} />
     }
-})
+}))

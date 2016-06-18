@@ -1,8 +1,9 @@
 import React from 'react'
 
 import Intro from 'components/intro'
-import SiteNavigation from 'components/site-navigation'
+import Navigation from 'components/navigation'
 import SocialLinks from 'components/social-links'
+import LanguageSwitcher from 'components/language-switcher'
 
 export default React.createClass({
     render() {
@@ -10,16 +11,18 @@ export default React.createClass({
             <div className="page-container full-height">
                 <div className="page-section page-section__navigation page-section__navigation--main">
                     <Intro/>
-                    <SiteNavigation/>
+                    <Navigation/>
                     <SocialLinks/>
+                    <LanguageSwitcher/>
                 </div>
                 <div className="page-section page-section__content">
                     {this.props.children}
                 </div>
 
                 <div className="page-section page-section__navigation page-section__navigation--secondary">
-                    <SiteNavigation/>
+                    <Navigation/>
                     <SocialLinks/>
+                    <LanguageSwitcher/>
                 </div>
             </div>
         )

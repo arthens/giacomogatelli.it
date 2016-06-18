@@ -11,5 +11,4 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr
+    Checkout https://github.com/arthens/giacomogatelli.it to see all libraries used to build this website

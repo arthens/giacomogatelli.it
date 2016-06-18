@@ -1,4 +1,4 @@
-{
+export default {
   "intro": "This is just a generic overview or my career. Please get in touch if you'd like to know more.",
   "work": [
     {
@@ -61,6 +61,7 @@
     "Clojure",
     "clojurescript",
     "Javascript",
+    "React",
     "SQL",
     "HTML + CSS",
     "docker"

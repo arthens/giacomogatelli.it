@@ -1,4 +1,4 @@
-import Layout from 'pages/layout';
+import Layout from 'layout';
 import About from 'pages/about';
 import Contact from 'pages/contact';
 import Curriculum from 'pages/curriculum';

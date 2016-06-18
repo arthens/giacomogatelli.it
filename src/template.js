@@ -16,7 +16,7 @@ export default (rendered, vars) =>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div id="root">${rendered}</div>
+  <div class="page-root" id="root">${rendered}</div>
 
   <script src='/js/app.js'></script>
 </body>

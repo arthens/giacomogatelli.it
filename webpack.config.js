@@ -17,6 +17,10 @@ module.exports = {
         // ],
         loaders: [
             {
+                test: /\.md/,
+                loader: 'raw-loader'
+            },
+            {
                 loader: 'babel-loader',
                 test: /jsx?$/,
                 exclude: /node_modules/,

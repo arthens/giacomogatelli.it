@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 export default  React.createClass({
     propTypes: {
@@ -8,13 +9,13 @@ export default  React.createClass({
     render() {
         return <div className="timeline">
             {this.props.events.map((event) => {
-                return this.renderEvent(event);
+                return this.renderEvent(event)
             })}
-        </div>;
+        </div>
     },
 
     renderEvent(event) {
-        let key = event.to + event.from + event.tite;
+        let key = event.to + event.from + event.tite
         return (
             <div
                 className="timeline__event"
@@ -26,14 +27,14 @@ export default  React.createClass({
                     {this.renderPlace(event)}
                 </div>
             </div>
-        );
+        )
     },
 
     renderPlace(event) {
         if (event.place) {
-            return <div>at {event.place}</div>
+            return <div>{event.place}</div>
         } else {
             return <span/>
         }
     }
-});
+})

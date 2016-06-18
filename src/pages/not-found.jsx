@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { FormattedMessage } from 'react-intl'
 
 export default React.createClass({
     render() {
         return (
             <div>
-                <h1>Not found</h1>
-
-                <p>Ooops! It looks like you landed on a page that doesn't exist!</p>
-
-                <p><Link to="/">Back to the frontpage?</Link></p>
+                <h1><FormattedMessage id="notfound_title"/></h1>
+                <p><FormattedMessage id="notfound_message"/></p>
+                <p><Link to="/"><FormattedMessage id="notfound_cta"/></Link></p>
             </div>
         )
     }

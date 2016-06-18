@@ -1,33 +1,39 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import { injectIntl } from 'react-intl'
 
 import Timeline from '../components/timeline'
 import Skills from '../components/skills'
 
-import cv from '../data/curriculum.en'
+import enCv from '../data/en.curriculum'
+import itCv from '../data/it.curriculum'
 
-export default React.createClass({
+export default injectIntl(React.createClass({
+    propTypes: {
+        intl: React.PropTypes.object.isRequired
+    },
+
     render() {
+        let cv = this.props.intl.locale === 'it' ? itCv : enCv
         return (
             <div>
-                <h1>Curriculum</h1>
+                <h1><FormattedMessage id="curriculum_title"/></h1>
 
-                <p>{this.props.intro}</p>
-                
                 <div>
-                    <h2>Work experience</h2>
+                    <h2><FormattedMessage id="curriculum_work_subtitle"/></h2>
                     <Timeline events={cv.work} />
                 </div>
 
                 <div>
-                    <h2>Education</h2>
+                    <h2><FormattedMessage id="curriculum_educations_subtitle"/></h2>
                     <Timeline events={cv.education} />
                 </div>
 
                 <div>
-                    <h2>Skills</h2>
+                    <h2><FormattedMessage id="curriculum_skills_title"/></h2>
                     <Skills skills={cv.skills} />
                 </div>
             </div>
         )
     }
-})
+}))

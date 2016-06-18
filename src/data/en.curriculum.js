@@ -1,9 +1,8 @@
 export default {
-  "intro": "This is just a generic overview or my career. Please get in touch if you'd like to know more.",
   "work": [
     {
       "from": "2015",
-      "to": "NOW",
+      "to": "now",
       "title": "Tech Lead",
       "place": "99designs"
     },

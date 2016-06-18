@@ -5,9 +5,9 @@ export default React.createClass({
         return (
             <div className="skills">
                 {this.props.skills.map(function (skill) {
-                    return <div key={skill} className="skills__skill">{skill}</div>;
+                    return <div key={skill} className="skills__skill">{skill}</div>
                 })}
             </div>
-        );
+        )
     }
 })

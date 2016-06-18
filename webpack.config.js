@@ -36,11 +36,14 @@ module.exports = {
             '/',
             '/curriculum.html',
             '/contact.html',
+            '/it/',
+            '/it/curriculum.html',
+            '/it/contact.html',
             '/404.html'
         ])
     ],
     entry: {
-        "js/app.js": "./src/app.jsx",
+        "js/app.js": "./src/app.jsx"
     },
     output: {
         path: path.join(__dirname, "_site/"),

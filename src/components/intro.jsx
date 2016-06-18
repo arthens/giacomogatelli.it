@@ -1,13 +1,19 @@
 import React from 'react'
 
-export default React.createClass({
+import { injectIntl, FormattedMessage } from 'react-intl'
+
+export default injectIntl(React.createClass({
+    propTypes: {
+        intl: React.PropTypes.object.isRequired
+    },
+
     render() {
         return (
             <div className="section section__me">
                 <img
                     className="me-avatar"
                     src="/images/giacomo-330x330.jpg"
-                    title="Yep, that's me"
+                    title={this.props.intl.formatMessage({id: 'intro_avatar_title'})}
                     alt="Giacomo Gatelli"
                     width="120"
                     height="120"
@@ -16,9 +22,9 @@ export default React.createClass({
                         <h2 className="me-name">Giacomo Gatelli</h2>
                     </a>
                     <p className="me-intro">
-                        Software engineer, technology enthusiast, gamer, avid reader.
+                        <FormattedMessage id="intro_description"/>
                     </p>
             </div>
         )
     }
-})
+}))

@@ -40,7 +40,7 @@ module.exports = {
         ])
     ],
     entry: {
-        "js/app.js": "./src/app.jsx",
+        "js/app.js": "./src/app.jsx"
     },
     output: {
         path: path.join(__dirname, "_site/"),

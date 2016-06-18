@@ -1,35 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router'
-
-
-const Layout = React.createClass({
-    render() {
-        return <div>
-            <Link to="/">About</Link>
-            <Link to="/curriculum.html">Curriculum</Link>
-            <Link to="/contact.html">Contact</Link>
-            {this.props.children}
-        </div>
-    }
-})
-
-const About = React.createClass({
-    render() {
-        return <div>About</div>
-    }
-})
-
-const Contact = React.createClass({
-    render() {
-        return <div>Contact</div>
-    }
-})
-const Curriculum = React.createClass({
-    render() {
-        return <div>Curriculum</div>
-    }
-})
-
+import Layout from 'pages/layout';
+import About from 'pages/about';
+import Contact from 'pages/contact';
+import Curriculum from 'pages/curriculum';
 
 export default {
     path: '/',

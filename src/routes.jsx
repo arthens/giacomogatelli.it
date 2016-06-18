@@ -10,10 +10,6 @@ export default {
     indexRoute: { component: About },
     childRoutes: [
         {
-            path: 'index.html',
-            component: About
-        },
-        {
             path: 'curriculum.html',
             component: Curriculum
         },

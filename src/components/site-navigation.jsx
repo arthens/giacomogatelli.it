@@ -9,17 +9,17 @@ export default React.createClass({
                     <li className="menu-link">
                         <i className="fa fa-angle-double-right"></i>
                         {' '}
-                        <Link to="/">About</Link>
+                        <Link to="/" activeClassName="selected" onlyActiveOnIndex={true}>About</Link>
                     </li>
                     <li className="menu-link">
                         <i className="fa fa-angle-double-right"></i>
                         {' '}
-                        <Link to="/curriculum.html">Curriculum</Link>
+                        <Link to="/curriculum.html" activeClassName="selected">Curriculum</Link>
                     </li>
                     <li className="menu-link">
                         <i className="fa fa-angle-double-right"></i>
                         {' '}
-                        <Link to="/contact.html">Contact</Link>
+                        <Link to="/contact.html" activeClassName="selected">Contact</Link>
                     </li>
                 </ul>
             </div>

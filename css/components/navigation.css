@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 
-.page-section__navigation a:hover {
+.page-section__navigation a:hover, .page-section__navigation a.selected {
   color: #fdb020;
 }
 

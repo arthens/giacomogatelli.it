@@ -35,7 +35,8 @@ module.exports = {
         new StaticSiteGeneratorPlugin('js/app.js', [
             '/index.html',
             '/curriculum.html',
-            '/contact.html'
+            '/contact.html',
+            '/404.html'
         ])
     ],
     entry: {

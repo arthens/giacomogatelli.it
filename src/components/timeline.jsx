@@ -9,13 +9,13 @@ export default  React.createClass({
     render() {
         return <div className="timeline">
             {this.props.events.map((event) => {
-                return this.renderEvent(event);
+                return this.renderEvent(event)
             })}
-        </div>;
+        </div>
     },
 
     renderEvent(event) {
-        let key = event.to + event.from + event.tite;
+        let key = event.to + event.from + event.tite
         return (
             <div
                 className="timeline__event"
@@ -27,7 +27,7 @@ export default  React.createClass({
                     {this.renderPlace(event)}
                 </div>
             </div>
-        );
+        )
     },
 
     renderPlace(event) {
@@ -37,4 +37,4 @@ export default  React.createClass({
             return <span/>
         }
     }
-});
+})

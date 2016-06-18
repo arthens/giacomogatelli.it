@@ -14,7 +14,7 @@ if (typeof document !== 'undefined') {
 }
 
 export default (locals, callback) => {
-    const history = createMemoryHistory();
+    const history = createMemoryHistory()
     const location = history.createLocation(locals.path)
 
     match({ routes, location}, (error, redirectLocation, renderProps) => {
@@ -23,6 +23,6 @@ export default (locals, callback) => {
             pageTitle: 'Giacomo Gatelli',
             pageDescription: 'Giacomo Gatelli - Software engineer, technology enthusiast, gamer, avid reader',
             lang: 'en'
-        }));
+        }))
     })
 }

@@ -1,9 +1,15 @@
-{
+export default {
   "intro": "This is just a generic overview or my career. Please get in touch if you'd like to know more.",
   "work": [
     {
-      "from": "2014",
+      "from": "2015",
       "to": "NOW",
+      "title": "Tech Lead",
+      "place": "99designs"
+    },
+    {
+      "from": "2014",
+      "to": "2015",
       "title": "Senior Software Engineer",
       "place": "99designs"
     },
@@ -31,7 +37,7 @@
       "from": "2008",
       "to": "2009",
       "title": "Master in Computer Science",
-      "place": "The Univeristy of Edinburgh"
+      "place": "The University of Edinburgh"
     },
     {
       "from": "2007",
@@ -55,7 +61,9 @@
     "Clojure",
     "clojurescript",
     "Javascript",
+    "React",
     "SQL",
-    "HTML + CSS"
+    "HTML + CSS",
+    "docker"
   ]
 }

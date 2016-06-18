@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Navigation - primary and secondary
+   ========================================================================== */
+
+.page-section__navigation {
+  background-color: #191919;
+  color: #c8c8c8;
+  border-bottom: 5px solid #fdb020;
+}
+
+.page-section__navigation a {
+  color: #c8c8c8;
+  text-decoration: none;
+}
+
+.page-section__navigation a:hover, .page-section__navigation a.selected {
+  color: #fdb020;
+}
+
+.page-section__navigation--main .section__social {
+  display: none;
+}
+
+@media only screen and (min-width : 840px) {
+  .page-section__navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+
+    border-bottom: 0;
+    border-right: 5px solid #fdb020;
+  }
+
+  .page-section__content {
+    margin-left: 40%;
+  }
+
+  .page-section__navigation--main .section__social {
+    display: block;
+  }
+
+  .page-section__navigation--secondary {
+    display: none;
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+  .page-section__content {
+    padding: 30px 4%;
+  }
+}
+
+/* ==========================================================================
+   Navigation elements
+   ========================================================================== */
+
+.section__me {
+  text-align: center;
+}
+
+.me-avatar {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.section__menu {
+  text-align: center;
+}
+
+.menu-links {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link {
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+}
+
+.menu-link a {
+  font-weight: bold;
+}
+
+@media only screen and (min-width : 840px) {
+  .menu-link {
+    display: block;
+    margin: 0 0 20px 0;
+  }
+}
+
+.section__social {
+  text-align: center;
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+  display: inline-block;
+  list-style: none;
+  font-size: 32px;
+}
+
+.social-link + .social-link {
+  margin-left: 25px;
+}

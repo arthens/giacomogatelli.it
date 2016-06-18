@@ -1,0 +1,53 @@
+html, body {
+  height: 100%;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+@font-face {
+    font-family: 'aller';
+    src: url('/fonts/aller_lt-webfont.eot');
+    src: url('/fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/aller_lt-webfont.woff') format('woff'),
+         url('/fonts/aller_lt-webfont.ttf') format('truetype'),
+         url('/fonts/aller_lt-webfont.svg#aller_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+  font-family: 'aller', serif;
+  box-sizing: border-box;
+}
+
+.page-root {
+    height: 100%
+}
+
+.page-container {
+  position: relative;
+  min-height: 100%;
+}
+
+.page-section {
+  padding: 30px;
+}
+
+.section + .section {
+  margin-top: 30px;
+}
+
+.page-section__content {
+  font-size: 1.2em;
+  line-height: 1.5;
+    min-height: 500px;
+}
+
+@media only screen and (min-width : 840px) {
+  .section + .section {
+    margin-top: 60px;
+  }
+}

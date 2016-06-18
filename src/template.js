@@ -12,6 +12,8 @@ export default (rendered, vars) =>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="X-UA-TextLayoutMetrics" content="natural" />
   <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div id="root">${rendered}</div>

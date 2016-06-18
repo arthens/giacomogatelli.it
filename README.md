@@ -4,7 +4,7 @@ Public repo for my personal website.
 
 ## Build
 
-Run the compilation and copy steps using `npm run build-prod`.
+Run the compilation and copy steps using `npm run prod`.
 
 ### Deployment
 

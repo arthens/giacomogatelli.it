@@ -9,7 +9,7 @@
     "css": "mkdir -p _site/css && minify --output _site/css/style.css css/style.css",
     "build": "webpack -d --display-modules",
     "build-watch": "npm run build -- --watch",
-    "build-prod": "npm run static && webpack -p"
+    "prod": "npm run clean && npm run static && npm run css && webpack -p"
   },
   "dependencies": {
     "babel-core": "^6.9.1",
